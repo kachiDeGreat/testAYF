@@ -361,8 +361,12 @@ h3.title:after {
   margin-top: 130px;
 }
 
+.stats-grid-w3-agile p {
+  font-size: 15px;
+}
+
 .numscroller {
-  font-size: 54px;
+  font-size: 50px;
   color: #fff;
   text-shadow: 2px 4px 6px rgb(8, 8, 8);
   position: relative;
@@ -380,7 +384,7 @@ h3.title:after {
 
 .cover {
   /* background: linear-gradient(to right, rgba(0, 0, 0, 0.857), #271669); */
-  background-color: #271669ec;
+  background-color: #271669c7;
   height: 99%;
   width: 100%;
 }
@@ -389,6 +393,9 @@ h3.title:after {
   .chaplain-text h1 {
     font-size: 30px;
     line-height: 38px;
+  }
+  .banner-text-whtree p {
+    font-size: 14px;
   }
 }
 
