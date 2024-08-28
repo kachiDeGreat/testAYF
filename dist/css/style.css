@@ -18,15 +18,15 @@ body {
   flex-direction: column;
 }
 
-.logo {
+.logo-load {
   margin-bottom: 20px;
   animation: heartbeat 1.5s infinite;
+  font-size: 24px; /* Adjust font size */
+  font-weight: bold; /* Adjust font weight */
 }
 
-.logo img {
-  width: 100px;
-  /* Adjust logo size */
-  height: auto;
+.logo-load span {
+  display: inline-block; /* Allow animation */
 }
 
 .loader {
@@ -84,6 +84,7 @@ body {
     transform: scale(1);
   }
 }
+
 
 /* h3 title style  */
 
