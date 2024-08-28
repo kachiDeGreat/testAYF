@@ -1,0 +1,345 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden; /* hides horizontal scrollbar */
+}
+
+/* h3 title style  */
+
+h3.title {
+  font-size: 30px;
+  position: relative;
+  font-family: "Libre Baskerville", serif;
+  text-transform: uppercase;
+  padding-top: 3rem;
+  color: #271669;
+}
+
+h3.title:before,
+h3.title:after {
+  position: absolute;
+  background: #b89023;
+  width: 10%;
+  height: 2px;
+  content: " ";
+  bottom: -3%;
+}
+
+h3.title:before {
+  left: 43%;
+}
+
+h3.title:after {
+  bottom: -20%;
+  right: 43%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6e6e6e;
+  border-radius: 2.5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #575757;
+}
+
+.logo {
+  max-width: 85px;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.navbar {
+  background-color: none;
+  transition: background-color 0.5s ease;
+}
+
+.navbar.scrolled {
+  background-color: #fff !important; /* Change to white on scroll */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.navbar.scrolled .logo {
+  transform: scale(0.8);
+}
+
+.navbar:not(.scrolled) .logo {
+  transform: scale(1.2);
+}
+
+.nav-link:hover {
+  color: #271669 !important;
+}
+.navbar.scrolled .nav-link {
+  color: #000 !important;
+}
+.navbar.scrolled .active {
+  color: #271669 !important;
+}
+.navbar.scrolled .nav-link:hover {
+  color: #271669 !important;
+}
+
+.nav-link {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.dropdown > .dropdown-menu {
+  background: #fff;
+  border-radius: 0;
+  border: none;
+}
+.dropdown-item {
+  border-bottom: 1px solid rgb(224, 224, 224);
+  text-transform: uppercase;
+}
+
+.fa-bars {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.navbar.scrolled .fa-bars {
+  color: #271669; /* Make icon black when bg is white */
+}
+.fa-circle-xmark {
+  font-size: 2rem;
+}
+/* banner */
+
+.banner-w3ls-1,
+.banner-w3ls-2,
+.banner-w3ls-3,
+.banner-agile {
+  min-height: 700px;
+}
+
+.banner-w3ls-1 {
+  background: url(../img/453017005_500950252588184_1517653206023168587_n.jpg)
+    no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-attachment: fixed;
+}
+
+.banner-w3ls-2 {
+  background: url(../img/img-2.jpg) no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-attachment: fixed;
+}
+
+.banner-w3ls-3 {
+  background: url(../img/img-1.jpg) no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-attachment: fixed;
+}
+
+/* slider */
+
+.slider {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  /* transition: transform 1s ease-in-out; */
+  list-style: none;
+}
+
+.slider li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 0vw;
+  overflow: hidden;
+  transition: width 800ms cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+.slider li.active {
+  z-index: 2;
+  width: 100vw;
+  /* transform: translateY(0); */
+}
+
+.slider li.prev {
+  z-index: 1;
+  width: 100vw;
+  /* transform: translateY(-100%); */
+}
+
+/* //slider */
+
+/* banner text */
+
+.banner-agile {
+  position: relative;
+  /* text-align: left; */
+  background: rgba(0, 0, 0, 0.52);
+}
+
+.banner-text-posi-w3ls {
+  position: absolute;
+  z-index: 999;
+  top: 30%;
+  left: 13%;
+  transform: none;
+}
+
+.banner-text-whtree {
+  max-width: 75%;
+}
+
+.banner-text-whtree p {
+  font-size: 17px;
+}
+
+.button-area button,
+.button-area a {
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: 0;
+  display: inline-block;
+  letter-spacing: 4px;
+  font-weight: bold;
+  /* color: #fff; */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  /* padding: 14px 21px; */
+  font-size: 6pt;
+  /* background-color: #271669; */
+  transition: 0.3s ease;
+}
+.button-area button:hover,
+.button-area a:hover {
+  transform: scale(1.2);
+}
+.button-area span {
+  font-size: 17px;
+  margin-left: 30px;
+  display: none;
+}
+
+.chaplain-text h1 {
+  font-size: 45px;
+  text-transform: uppercase;
+  line-height: 65px;
+  font-weight: bolder;
+}
+
+.chaplain-text p {
+  font-size: 14px;
+  color: #7a7a7a;
+  line-height: 25px;
+}
+
+.dancing {
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+}
+
+.stats-w3layouts {
+  background: url(../img/WhatsApp\ Image\ 2024-07-19\ at\ 21.15.36.jpg)
+    no-repeat center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  margin-top: 130px;
+}
+
+.numscroller {
+  font-size: 54px;
+  color: #fff;
+  text-shadow: 2px 4px 6px rgb(8, 8, 8);
+  position: relative;
+}
+
+.numscroller:before {
+  content: " ";
+  /* background: #e91e1e; */
+  width: 30%;
+  height: 8px;
+  position: absolute;
+  bottom: -25%;
+  left: 35%;
+}
+
+.cover {
+  /* background: linear-gradient(to right, rgba(0, 0, 0, 0.857), #271669); */
+  background-color: #271669ec;
+  height: 99%;
+  width: 100%;
+}
+
+@media screen and (max-width: 430px) {
+  .big-text {
+    font-size: 1.2rem;
+  }
+
+  .countdown-el span {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .button-area span {
+    margin: 20px 0 0;
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-link {
+    color: #fff;
+  }
+  .dropdown > .dropdown-menu {
+    visibility: hidden;
+    opacity: 0;
+    top: 100%;
+    display: block;
+    transition: all 0.2 ease-out;
+  }
+
+  .dropdown:hover > .dropdown-menu {
+    padding: 20px 0;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  .dropdown-item:hover {
+    color: #fff;
+    background-color: #271669;
+  }
+
+  .links {
+    display: none !important;
+  }
+  .banner-text-posi-w3ls {
+    top: 35%;
+  }
+}
