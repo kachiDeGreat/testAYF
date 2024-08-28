@@ -18,6 +18,16 @@ body {
   flex-direction: column;
 }
 
+#preloader.fade-out {
+  animation: fade-out 0.5s ease-out;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
 .logo-load {
   margin-bottom: 20px;
   animation: heartbeat 1.5s infinite;
@@ -84,7 +94,6 @@ body {
     transform: scale(1);
   }
 }
-
 
 /* h3 title style  */
 
@@ -374,6 +383,13 @@ h3.title:after {
   background-color: #271669ec;
   height: 99%;
   width: 100%;
+}
+
+@media screen and (max-width: 536px) {
+  .chaplain-text h1 {
+    font-size: 30px;
+    line-height: 38px;
+  }
 }
 
 @media screen and (max-width: 430px) {
