@@ -350,6 +350,13 @@ h3.title:after {
   font-size: 25px;
 }
 
+/* mission */
+.mission h4 {
+  font-size: 25px;
+  font-family: "Libre Baskerville", serif;
+  line-height: 35px;
+}
+
 .stats-w3layouts {
   background: url(../img/WhatsApp\ Image\ 2024-07-19\ at\ 21.15.36.jpg)
     no-repeat center fixed;
