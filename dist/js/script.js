@@ -48,6 +48,8 @@ countdown();
 
 setInterval(countdown, 1000);
 
+
+
 // // Add event listener to window scroll
 // document.addEventListener("scroll", function () {
 //   // Get the navbar element

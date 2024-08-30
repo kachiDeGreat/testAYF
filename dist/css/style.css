@@ -103,13 +103,13 @@ h3.title {
   font-family: "Libre Baskerville", serif;
   text-transform: uppercase;
   padding-top: 3rem;
-  color: #271669;
+  color: #000;
 }
 
 h3.title:before,
 h3.title:after {
   position: absolute;
-  background: #b89023;
+  background: #271669;
   width: 10%;
   height: 2px;
   content: " ";
@@ -125,7 +125,7 @@ h3.title:after {
   right: 43%;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 5px;
   background-color: #f0f0f0;
 }
@@ -137,7 +137,7 @@ h3.title:after {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #575757;
-}
+} */
 
 .logo {
   max-width: 85px;
@@ -212,7 +212,7 @@ h3.title:after {
 .banner-w3ls-3,
 .banner-w3ls-4,
 .banner-agile {
-  min-height: 700px;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -300,11 +300,12 @@ h3.title:after {
 .banner-text-posi-w3ls {
   position: absolute;
   z-index: 999;
-  top: 50%;
+  top: 59%;
   left: 59%;
   transform: translate(-59%, -50%);
   text-align: center;
   width: 100%;
+  padding: 20px;
 }
 
 .banner-text-whtree {
@@ -405,6 +406,70 @@ h3.title:after {
   width: 100%;
   height: 100%;
 } */
+
+.image-link {
+  position: relative;
+  display: block;
+}
+
+.image-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.5s, box-shadow 0.5s;
+  transform: translateY(20px);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.image-link:hover .image-description {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Show description on small screens */
+@media (max-width: 768px) {
+  .image-description {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+}
+
+.bg-image {
+  transition: transform 0.5s, filter 0.5s, box-shadow 0.5s;
+  height: 300px; /* Added fixed height */
+  object-fit: cover; /* Make image responsive */
+  width: 100%; /* Make image full width */
+}
+
+.image-link:hover .bg-image {
+  transform: scale(1.2);
+  filter: brightness(0.3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.post h2 {
+  font-size: 32px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-family: "Libre Baskerville";
+}
+
+.post p {
+  font-size: 12px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
 .stats-w3layouts {
   background: url(../img/WhatsApp\ Image\ 2024-07-19\ at\ 21.15.36.jpg)
     no-repeat center fixed;
@@ -512,5 +577,11 @@ h3.title:after {
 @media (max-width: 992px) {
   .banner-text-whtree h1 {
     font-size: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  .banner-text-whtree h1 {
+    font-size: 40px;
   }
 }
