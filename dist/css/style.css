@@ -210,13 +210,14 @@ h3.title:after {
 .banner-w3ls-1,
 .banner-w3ls-2,
 .banner-w3ls-3,
+.banner-w3ls-4,
 .banner-agile {
   min-height: 700px;
+  position: relative;
 }
 
 .banner-w3ls-1 {
-  background: url(../img/453017005_500950252588184_1517653206023168587_n.jpg)
-    no-repeat center;
+  background: url(../img/img-1.jpg) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -236,7 +237,16 @@ h3.title:after {
 }
 
 .banner-w3ls-3 {
-  background: url(../img/img-1.jpg) no-repeat center;
+  background: url(../img/img-3.jpg) no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  background-attachment: fixed;
+}
+.banner-w3ls-4 {
+  background: url(../img/img-4.jpg) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -285,19 +295,26 @@ h3.title:after {
 .banner-agile {
   position: relative;
   /* text-align: left; */
-  background: rgba(0, 0, 0, 0.52);
 }
 
 .banner-text-posi-w3ls {
   position: absolute;
   z-index: 999;
-  top: 30%;
-  left: 13%;
-  transform: none;
+  top: 50%;
+  left: 59%;
+  transform: translate(-59%, -50%);
+  text-align: center;
+  width: 100%;
 }
 
 .banner-text-whtree {
-  max-width: 75%;
+  max-width: 100%;
+}
+.banner-text-whtree h1 {
+  font-size: 70px;
+  text-shadow: 0px 4px 0px rgba(255, 255, 255, 0.1),
+    0px 6px 0px rgba(255, 255, 255, 0.2);
+  font-weight: bolder;
 }
 
 .banner-text-whtree p {
@@ -345,6 +362,12 @@ h3.title:after {
   line-height: 25px;
 }
 
+.chaplain-text-img img {
+  border-top-left-radius: 200px;
+  max-width: 100%;
+  height: auto;
+}
+
 .dancing {
   font-family: "Dancing Script", cursive;
   font-size: 25px;
@@ -357,6 +380,31 @@ h3.title:after {
   line-height: 35px;
 }
 
+/* bishop vid*/
+.bishop-vid-section {
+  background: url(../img/vid-2.jpeg) no-repeat center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  margin-top: 130px;
+}
+
+.bishop-vid-section .coverrrr {
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.651); */
+  padding: 100px 0 100px 0;
+}
+
+/* .video-wrapper {
+  height: 500px;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+} */
 .stats-w3layouts {
   background: url(../img/WhatsApp\ Image\ 2024-07-19\ at\ 21.15.36.jpg)
     no-repeat center fixed;
@@ -408,6 +456,9 @@ h3.title:after {
     font-size: 18px;
     line-height: 29px;
   }
+  .bishop-vid-section .cover {
+    padding: 120px 0 120px 0;
+  }
 }
 
 @media screen and (max-width: 430px) {
@@ -456,7 +507,10 @@ h3.title:after {
   .links {
     display: none !important;
   }
-  .banner-text-posi-w3ls {
-    top: 35%;
+}
+
+@media (max-width: 992px) {
+  .banner-text-whtree h1 {
+    font-size: 50px;
   }
 }
