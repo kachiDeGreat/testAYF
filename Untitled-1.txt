@@ -1,0 +1,292 @@
+<div class="container-fluid p-0 p-md-5">
+    <div class="text-start post">
+        <h2 class="text-white" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
+            data-aos-delay="200">Our
+            Archdeaconries
+        </h2>
+        <p class="text-white" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="200">
+            Discover the
+            vibrant communities that make up our diocese.</p>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 col-md-4 p-3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
+            data-aos-delay="200">
+            <a href="#" class="image-link">
+                <img src="dist/img/arch.jpg" alt="Image 1" class="img-fluid bg-image">
+                <div class="image-description">cathedral Archdeaconry</div>
+            </a>
+        </div>
+        <div class="col-12 col-md-4 p-3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
+            data-aos-delay="200">
+            <a href="#" class="image-link">
+                <img src="dist/img/arch.png" alt="Image 1" class="img-fluid bg-image">
+                <div class="image-description">Calabar Archdeaconry</div>
+            </a>
+        </div>
+        <div class="col-12 col-md-4 p-3" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
+            data-aos-delay="200">
+            <a href="#" class="image-link">
+                <img src="dist/img/arch.jpg" alt="Image 1" class="img-fluid bg-image">
+                <div class="image-description">Yakurr Mis Archdeaconry</div>
+            </a>
+        </div>
+        <!-- <div class="col-12 col-md-6 p-3 d-none d-md-block">
+        <a href="#" class="image-link" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
+          data-aos-delay="200">
+          <img src="dist/img/img-04.jpg" alt="Image 1" class="img-fluid bg-image">
+          <div class="image-description">see post on facebook</div>
+        </a>
+      </div>
+      <div class="col-12 col-md-6 p-3 d-none d-md-block" data-aos="fade-up" data-aos-easing="linear"
+        data-aos-duration="1000" data-aos-delay="200">
+        <a href="#" class="image-link">
+          <img src="dist/img/img-05.jpg" alt="Image 1" class="img-fluid bg-image">
+          <div class="image-description">see post on facebook</div>
+        </a>
+      </div> -->
+    </div>
+    <div class="button-area p-3 text-center">
+        <a data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" href="" class="mt-3"
+            style="background-color: #271669;padding: 17px 27px; font-size: 9pt;color: #fff;padding: 14px 21px;">Archdeaconries
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="p-5" style="background-color: #0a0818;">
+    <div class="container py-xl-5 py-lg-3">
+        <div class="stats-info">
+            <div class="row">
+                <div class="
+                col-lg-3 col-6
+                stats-grid-w3-agile
+                text-center
+                mt-lg-0 mt-5
+                px-xl-5 px-3
+              " data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="numscroller font-weight-bold my-2" data-slno="1" data-min="0" data-max="14"
+                        data-delay="1" data-increment="1">
+                        14
+                    </div>
+                    <p class="text-uppercase text-white border-top pt-4 mt-3">
+                        Archdeaconry<br>/Deanery
+                    </p>
+                </div>
+                <div class="
+                col-lg-3 col-6
+                stats-grid-w3-agile
+                text-center
+                mt-lg-0 mt-5
+                px-xl-5 px-3
+              " data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="numscroller font-weight-bold my-2" data-slno="1" data-min="0" data-max="39"
+                        data-delay="1" data-increment="1">
+                        39
+                    </div>
+                    <p class="text-uppercase text-white border-top pt-4 mt-3">
+                        localities reached
+                    </p>
+                </div>
+                <div class="
+                col-lg-3 col-6
+                stats-grid-w3-agile
+                text-center
+                px-xl-5 px-3
+              " data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="numscroller font-weight-bold my-2" data-slno="1" data-min="0" data-max="0"
+                        data-delay="1" data-increment="1">
+                        0
+                    </div>
+                    <p class="text-uppercase text-white border-top pt-4 mt-3">
+                        implemented projects
+                    </p>
+                </div>
+
+                <div class="
+                col-lg-3 col-6
+                stats-grid-w3-agile
+                text-center
+                px-xl-5 px-3
+              " data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="800">
+                    <div class="numscroller font-weight-bold my-2" data-slno="1" data-min="0" data-max="2000"
+                        data-delay="1" data-increment="1">
+                        2000
+                    </div>
+                    <p class="text-uppercase text-white border-top pt-4 mt-3">
+                        Members arcoss the diocese
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="p-4" style="background-color: #0a0818;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 text-center text-md-start post1">
+          <h2 class="text-white fw-bolder text-capitalize mt-3">See whatsapp series on leadership</h2>
+        </div>
+        <div class="col-12 col-md-4 text-center text-md-end">
+          <div class="button-area p-3">
+            <a href=""
+              style="background-color: #fff;padding: 17px 27px; font-size: 9pt;color: #271669;padding: 14px 21px;">resources
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+<!--bishop video-->
+<section class="bishop-vid-section">
+    <div class="coverrrr">
+        <div class="container">
+            <div class="text-center post mb-5">
+                <h2 class="text-light" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
+                    data-aos-delay="200">our videos
+                </h2>
+                <p class="text-light" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
+                    data-aos-delay="200">watch our latest video...</p>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12 col-lg-11 mx-auto vid-section">
+                    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="200"
+                        style="padding:56.25% 0 0 0;position:relative;"><iframe
+                            src="https://player.vimeo.com/video/1004494197?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                            title="Guess the hymn?"></iframe></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="p-4" style="background-color: #0a0818;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 text-center text-md-start post1">
+                <h2 class="text-white fw-bolder text-capitalize mt-3">See whatsapp series on leadership</h2>
+            </div>
+            <div class="col-12 col-md-4 text-center text-md-end">
+                <div class="button-area p-3">
+                    <a href=""
+                        style="background-color: #fff;padding: 17px 27px; font-size: 9pt;color: #271669;padding: 14px 21px;">resources
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br><br><br><br><br><br>
+<!-- stats -->
+<div class="stats-w3layouts">
+    <div class="cover py-5">
+        <!-- <h3 class="title text-center text-light fw-bolder">
+      About
+      <span style=" letter-spacing: 2px" class="text-orange fst-italic">Us</span>
+    </h3> -->
+        <div class="container py-xl-5 py-lg-3">
+            <div class="stats-info">
+                <div class="row">
+                    <div class="
+                  col-lg-3 col-6
+                  stats-grid-w3-agile
+                  text-center
+                  mt-lg-0 mt-5
+                  px-xl-5 px-3
+                " data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="numscroller font-weight-bold my-2" data-slno="1" data-min="0" data-max="14"
+                            data-delay="1" data-increment="1">
+                            14
+                        </div>
+                        <p class="text-uppercase text-white border-top pt-4 mt-3">
+                            Archdeaconry<br>/Deanery
+                        </p>
+                    </div>
+                    <div class="
+                  col-lg-3 col-6
+                  stats-grid-w3-agile
+                  text-center
+                  mt-lg-0 mt-5
+                  px-xl-5 px-3
+                " data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="numscroller font-weight-bold my-2" data-slno="1" data-min="0" data-max="39"
+                            data-delay="1" data-increment="1">
+                            39
+                        </div>
+                        <p class="text-uppercase text-white border-top pt-4 mt-3">
+                            localities reached
+                        </p>
+                    </div>
+                    <div class="
+                  col-lg-3 col-6
+                  stats-grid-w3-agile
+                  text-center
+                  px-xl-5 px-3
+                " data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="600">
+                        <div class="numscroller font-weight-bold my-2" data-slno="1" data-min="0" data-max="0"
+                            data-delay="1" data-increment="1">
+                            0
+                        </div>
+                        <p class="text-uppercase text-white border-top pt-4 mt-3">
+                            implemented projects
+                        </p>
+                    </div>
+
+                    <div class="
+                  col-lg-3 col-6
+                  stats-grid-w3-agile
+                  text-center
+                  px-xl-5 px-3
+                " data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="800">
+                        <div class="numscroller font-weight-bold my-2" data-slno="1" data-min="0" data-max="2000"
+                            data-delay="1" data-increment="1">
+                            2000
+                        </div>
+                        <p class="text-uppercase text-white border-top pt-4 mt-3">
+                            Members arcoss the diocese
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

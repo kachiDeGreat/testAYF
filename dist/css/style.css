@@ -1,6 +1,17 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden; /* hides horizontal scrollbar */
+  scroll-behavior: smooth;
 }
 
 /*loader*/
@@ -212,7 +223,7 @@ h3.title:after {
 .banner-w3ls-3,
 .banner-w3ls-4,
 .banner-agile {
-  min-height: 100vh;
+  min-height: 700px;
   position: relative;
 }
 
@@ -364,7 +375,7 @@ h3.title:after {
 }
 
 .chaplain-text-img img {
-  border-top-left-radius: 200px;
+  /* border-top-left-radius: 200px; */
   max-width: 100%;
   height: auto;
 }
@@ -376,8 +387,8 @@ h3.title:after {
 
 /* mission */
 .mission h4 {
-  font-size: 25px;
-  font-family: "Libre Baskerville", serif;
+  font-size: 23px;
+  /* font-family: "Libre Baskerville", serif; */
   line-height: 35px;
 }
 
@@ -461,11 +472,18 @@ h3.title:after {
   font-size: 32px;
   font-weight: bolder;
   text-transform: uppercase;
+  /* color: #fff; */
   font-family: "Libre Baskerville";
+}
+
+.post1 h2 {
+  font-family: "Libre Baskerville";
+  font-size: 25px;
 }
 
 .post p {
   font-size: 12px;
+  /* color: #fff; */
   font-weight: bolder;
   text-transform: uppercase;
 }
@@ -478,7 +496,6 @@ h3.title:after {
   -moz-background-size: cover;
   -o-background-size: cover;
   -ms-background-size: cover;
-  margin-top: 130px;
 }
 
 .stats-grid-w3-agile p {
@@ -504,7 +521,7 @@ h3.title:after {
 
 .cover {
   /* background: linear-gradient(to right, rgba(0, 0, 0, 0.857), #271669); */
-  background-color: #271669c7;
+  background-color: #000000c7;
   height: 99%;
   width: 100%;
 }
@@ -523,6 +540,9 @@ h3.title:after {
   }
   .bishop-vid-section .cover {
     padding: 120px 0 120px 0;
+  }
+  .post h2 {
+    font-size: 25px;
   }
 }
 
