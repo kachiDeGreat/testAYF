@@ -170,7 +170,7 @@ h3.title:after {
 }
 
 .navbar:not(.scrolled) .logo {
-  transform: scale(1.0);
+  transform: scale(1);
 }
 
 .nav-link:hover {
@@ -346,9 +346,8 @@ h3.title:after {
   outline: none;
   cursor: pointer;
   border-radius: 5px;
-  /* padding: 14px 21px; */
-  font-size: 6pt;
-  /* background-color: #271669; */
+  padding: 14px 24px;
+  font-size: 8pt;
   transition: 0.3s ease;
 }
 .button-area button:hover,
@@ -566,6 +565,13 @@ h3.title:after {
   }
   .post h2 {
     font-size: 25px;
+  }
+  .button-area button,
+  .button-area a {
+    /* color: #fff; */
+    font-size: 6pt;
+    transition: 0.3s ease;
+    padding: 14px 21px;
   }
 }
 
