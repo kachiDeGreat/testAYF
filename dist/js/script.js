@@ -15,40 +15,31 @@ window.addEventListener("load", function () {
 });
 
 
-const daysEl = document.getElementById("days");
-const hoursEl = document.getElementById("hours");
-const minsEl = document.getElementById("mins");
-const secondsEl = document.getElementById("seconds");
 
-const newYears = "13 december 2024";
+var countDownDate = new Date("Dec 13, 2024 22:00:00").getTime();
 
-function countdown() {
-  const newYearsDate = new Date(newYears);
-  const currentDate = new Date();
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
 
-  const totalSeconds = (newYearsDate - currentDate) / 1000;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // console.log(distance)
 
-  const days = Math.floor(totalSeconds / 3600 / 24);
-  const hours = Math.floor(totalSeconds / 3600) % 24;
-  const mins = Math.floor(totalSeconds / 60) % 60;
-  const seconds = Math.floor(totalSeconds) % 60;
+        document.querySelector(".days").innerHTML = days;
+        document.querySelector(".hours").innerHTML = hours;
+        document.querySelector(".minutes").innerHTML = minutes;
+        document.querySelector(".seconds").innerHTML = seconds;
 
-  daysEl.innerHTML = days;
-  hoursEl.innerHTML = formatTime(hours);
-  minsEl.innerHTML = formatTime(mins);
-  secondsEl.innerHTML = formatTime(seconds);
-}
+        if (distance < 0) {
+            clearInterval(x);
+            document.querySelector(".count-down").innerHTML = "Count down experied"
+        }
+    })
 
-function formatTime(time) {
-  return time < 10 ? `0${time}` : time;
-}
-
-// initial call
-countdown();
-
-setInterval(countdown, 1000);
-
-
+    // console.log(countDownDate);
 
 // // Add event listener to window scroll
 // document.addEventListener("scroll", function () {

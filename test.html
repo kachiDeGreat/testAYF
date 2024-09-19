@@ -7,98 +7,86 @@
     <title>Document</title>
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <style>
-        .upcoming-events {
-            background-image: url('dist/img/vid.png');
-            background-size: cover;
-            background-position: center;
-            padding: 20px;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Square+Peg&family=Ubuntu&display=swap');
 
-        .event-card {
-            background-color: #fff;
-            padding: 20px;
+    
+
+
+
+        ul li {
+            color: #000;
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 16px;
+            list-style: none;
+            text-align: center;
+            width: 21%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(20px);
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 500px;
-            position: relative;
-            transition: transform 0.3s ease-in-out;
+            border: 1px solid rgba(255, 255, 255, 0.18);
         }
 
-        .event-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+        ul li span {
+            display: block;
+            font-size: 3rem;
         }
 
-        .event-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px 10px 0 0;
-            position: absolute;
-            top: 0;
-            left: 0;
+        .count-down {
+            color: #000;
         }
 
-        .event-details {
-            padding: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .event-details h3 {
-            font-size: 24px;
-            margin-top: 10px;
-        }
-
-        .event-details p {
-            font-size: 16px;
-            color: #666;
-        }
-
-        .event-details button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .event-details button:hover {
-            background-color: #0056b3;
-        }
-
-        @media (max-width: 768px) {
-            .event-card {
-                padding-top: 250px;
+        @media only screen and (max-width: 767px) {
+            li {
+                font-size: 14px;
             }
 
-            .event-image {
-                position: static;
-                height: 150px;
+            li span {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <section class="upcoming-events">
-        <div class="event-card">
-            <img class="event-image" src="dist/img/img-01.jpg" alt="Event 1">
-            <div class="event-details">
-                <h3>Event 1</h3>
-                <p>March 12, 2023</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button>Learn More</button>
-            </div>
-        </div>
-    </section>
+        
+                <div class="count-down">
+                    <ul>
+                        <li><span class="days"></span>Days</li>
+                        <li><span class="hours"></span>Hours</li>
+                        <li><span class="minutes"></span>Minutes</li>
+                        <li><span class="seconds"></span>Seconds</li>
+                    </ul>
+                </div>
+
 </body>
+<script>
+    var countDownDate = new Date("Dec 30, 2024 00:00:00").getTime();
+
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // console.log(distance)
+
+        document.querySelector(".days").innerHTML = days;
+        document.querySelector(".hours").innerHTML = hours;
+        document.querySelector(".minutes").innerHTML = minutes;
+        document.querySelector(".seconds").innerHTML = seconds;
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.querySelector(".count-down").innerHTML = "Count down experied"
+        }
+    })
+
+    // console.log(countDownDate);
+</script>
 
 </html>
