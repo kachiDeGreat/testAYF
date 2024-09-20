@@ -1,17 +1,7 @@
-window.addEventListener("load", function () {
-  var preloader = document.getElementById("preloader");
-  var content = document.getElementById("content");
-
-  // Fade out preloader
-  preloader.classList.add("fade-out");
-
-  // Show content
-  content.style.display = "block";
-
-  // Remove preloader after fade-out
-  setTimeout(function () {
-    preloader.style.display = "none";
-  }, 500); // Adjust fade-out duration
+$(window).on('load', function () {
+  // Preloader
+  $('.loader').fadeOut();
+  $('.loader-mask').delay(350).fadeOut('slow');
 });
 
 

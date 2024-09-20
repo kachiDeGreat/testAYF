@@ -21,235 +21,226 @@
 </head>
 
 <body>
-  <!-- <div id="preloader">
-    <center>
-      <div class="logo-load">
-        <span>AYF CALABAR DIOCESE</span>
-      </div>
-      <div class="loader">
-        <div class="line"></div>
-      </div>
-    </center>
-  </div> -->
-  <div id="content">
-    <ul class="circles">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    <nav class="navbar navbar-expand-lg py-4 py-lg-0 fixed-top">
-      <div class="container px-4">
-        <a href=""> <img src="dist/img/favicon.png" alt="" class="logo" /> </a>
+  <div class="loader-mask">
+    <div class="loader">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <ul class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <nav class="navbar navbar-expand-lg py-4 py-lg-0 fixed-top">
+    <div class="container px-4">
+      <a href=""> <img src="dist/img/favicon.png" alt="" class="logo" /> </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#top-navbar"
+        aria-controls="top-navbar">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="top-navbar" aria-labelledby="top-navbarLabel">
+        <!--navbar contents-->
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#top-navbar"
           aria-controls="top-navbar">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="top-navbar" aria-labelledby="top-navbarLabel">
-          <!--navbar contents-->
-          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#top-navbar"
-            aria-controls="top-navbar">
-            <div class="d-flex justify-content-between p-1">
-              <img src="dist/img/logo.png" style=" max-width: 225px;
+          <div class="d-flex justify-content-between p-1">
+            <img src="dist/img/logo.png" style=" max-width: 225px;
             width: 100%;
             transition: transform 0.5s ease;" alt="" class="logo" />
-              <i style="margin-top: 25px" class="fa-regular fa-circle-xmark"></i>
-            </div>
-          </button>
-          <ul class="navbar-nav ms-lg-auto p-4 p-lg-0" style="margin-top: 20px">
-            <li class="nav-item px-3 px-lg-0 py-1">
-              <a class="nav-link active" aria-current="page" style="color: #271669" href="">Home</a>
-            </li>
-            <li class="nav-item px-3 px-lg-0 py-1 dropdown">
-              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                about
-              </a>
-              <ul class="dropdown-menu p-0">
-                <li>
-                  <a class="dropdown-item p-3" href="">About AYF Calabar</a>
-                </li>
-                <li>
-                  <a class="dropdown-item p-3" href="">Diocesan Excos</a>
-                  <a class="dropdown-item p-3" href="">Past Diocesan Excos</a>
-                </li>
-                <li><a class="dropdown-item p-3" style="border-bottom: none;" href="">Chaplains</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item px-3 px-lg-0 py-1">
-              <a class="nav-link" href="">Archdeaconries </a>
-            </li>
-            <li class="nav-item px-3 px-lg-0 py-1 dropdown">
-              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                media
-              </a>
-              <ul class="dropdown-menu p-0">
-                <li><a class="dropdown-item p-3" href="">videos </a></li>
-                <li><a class="dropdown-item p-3" href="">podcats </a></li>
-                <li><a class="dropdown-item p-3" href="">The Prefect manzine </a></li>
-                <li><a class="dropdown-item p-3" style="border-bottom: none;" href="">gallery</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item px-3 px-lg-0 py-1 dropdown">
-              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                more
-              </a>
-              <ul class="dropdown-menu p-0">
-                <li><a class="dropdown-item p-3" href="">Support</a></li>
-                <li><a class="dropdown-item p-3" href="">Upcoming Events</a></li>
-                <li><a class="dropdown-item p-3" href="">Projects</a></li>
-                <li><a class="dropdown-item p-3" style="border-bottom: none;" href="">Blog</a></li>
-              </ul>
-            </li>
-            </li>
-            <li class="nav-item px-3 px-lg-0 py-1">
-              <a class="nav-link" aria-current="page" href="">Contact Us</a>
-            </li>
-
-          </ul>
-          <br />
-          <div class="links text-center">
-            <a href="" class="px-1 fs-3 text-dark"><i class="fa-brands fa-facebook"></i></a>
-            <a href="" class="px-1 fs-3 text-dark"><i class="fa-brands fa-square-instagram"></i></a>
-            <a href="" class="px-1 fs-3 text-dark"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <i style="margin-top: 25px" class="fa-regular fa-circle-xmark"></i>
           </div>
-        </div>
+        </button>
+        <ul class="navbar-nav ms-lg-auto p-4 p-lg-0" style="margin-top: 20px">
+          <li class="nav-item px-3 px-lg-0 py-1">
+            <a class="nav-link active" aria-current="page" style="color: #271669" href="">Home</a>
+          </li>
+          <li class="nav-item px-3 px-lg-0 py-1 dropdown">
+            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              about
+            </a>
+            <ul class="dropdown-menu p-0">
+              <li>
+                <a class="dropdown-item p-3" href="">About AYF Calabar</a>
+              </li>
+              <li>
+                <a class="dropdown-item p-3" href="">Diocesan Excos</a>
+                <a class="dropdown-item p-3" href="">Past Diocesan Excos</a>
+              </li>
+              <li><a class="dropdown-item p-3" style="border-bottom: none;" href="">Chaplains</a></li>
+            </ul>
+          </li>
 
-        <!---->
-      </div>
-    </nav>
-    <!--Navbar//-->
-    <br><br><br><br>
-    <!-- hero -->
-    <section class="ps-3 pe-3 pe-md-5 ps-md-5 ps-lg-0 pe-lg-0" style='z-index:9999999999999999999;'>
-      <div class="container-fluid mt-4">
-        <div class="row justify-content-center pt-0">
-          <div class="col-sm-12 col-lg-5 chaplain-text-1 p-0 p-lg-5 pt-lg-0 mt-3">
-            <h1 class="mt-0 mt-lg-5" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
-              data-aos-delay="200">
-              welcome to ayf calabar diocese</h1>
-            <br>
-            <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="400">The
-              youth fellowship of the Anglican Diocese of Calabar, inspiring young people to
-              grow, discover, and impact for God</p>
-            <br>
-            <div class="button-area">
-              <a data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="400" href=""
-                class="mt-3" style="background-color: #271669;color:#fff">
-                Get in touch
-              </a>
-              &nbsp;&nbsp;&nbsp;
-              <a data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="400" href=""
-                class="mt-3" style="background-color: transparent;color:#271669;border: 1px solid #271669">
-                about us <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-sm-12 col-lg-1"></div>
-          <div class="text-center col-sm-12 col-lg-5 mt-4 mt-lg-0 p-0 chaplain-text-img-1">
-            <img data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="400"
-              src="Untitled design (3).png" style='z-index:-999999999999999999999999999999999999999999999' alt="">
-          </div>
+          <li class="nav-item px-3 px-lg-0 py-1">
+            <a class="nav-link" href="">Archdeaconries </a>
+          </li>
+          <li class="nav-item px-3 px-lg-0 py-1 dropdown">
+            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              media
+            </a>
+            <ul class="dropdown-menu p-0">
+              <li><a class="dropdown-item p-3" href="">videos </a></li>
+              <li><a class="dropdown-item p-3" href="">podcats </a></li>
+              <li><a class="dropdown-item p-3" href="">The Prefect manzine </a></li>
+              <li><a class="dropdown-item p-3" style="border-bottom: none;" href="">gallery</a></li>
+            </ul>
+          </li>
 
+          <li class="nav-item px-3 px-lg-0 py-1 dropdown">
+            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              more
+            </a>
+            <ul class="dropdown-menu p-0">
+              <li><a class="dropdown-item p-3" href="">Support</a></li>
+              <li><a class="dropdown-item p-3" href="">Upcoming Events</a></li>
+              <li><a class="dropdown-item p-3" href="">Projects</a></li>
+              <li><a class="dropdown-item p-3" style="border-bottom: none;" href="">Blog</a></li>
+            </ul>
+          </li>
+          </li>
+          <li class="nav-item px-3 px-lg-0 py-1">
+            <a class="nav-link" aria-current="page" href="">Contact Us</a>
+          </li>
+
+        </ul>
+        <br />
+        <div class="links text-center">
+          <a href="" class="px-1 fs-3 text-dark"><i class="fa-brands fa-facebook"></i></a>
+          <a href="" class="px-1 fs-3 text-dark"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="" class="px-1 fs-3 text-dark"><i class="fa-brands fa-square-x-twitter"></i></a>
         </div>
       </div>
-    </section>
-    <br>
-    <!--//mission-->
-    <section data-aos="fade-up" style="background: #cfe2ff18" class="p-0">
-      <div class="container-fluid mt-5">
-        <div class="row justify-content-center pt-0">
-          <div class="col-sm-12 col-lg-5 mt-4 mt-lg-0 p-0 chaplain-text-img">
-            <img src="dist/img/Your paragraph text (2).png" style="margin-top: -65px;" alt="">
-          </div>
-          <!-- <div class="col-sm-12 col-lg-1"></div> -->
-          <div class="col-sm-12 col-lg-6 chaplain-text p-4 p-lg-5">
-            <h1 class="mt-0 mt-lg-5" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
-              data-aos-delay="200">
-              Welcome we’re glad you’re here.</h1>
-            <br>
-            <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="400">Jesus was a
-              simple man with a simple plan to make God known. Together, we constantly look at Jesus through God’s
-              Word,
-              inspired to become whatever destiny requires so that we can give hope to the many still unfamiliar with
-              God’s amazing love. We do this by building a community rooted in the Bible, fostering deep spiritual
-              friendships, and doing good in our community.</p>
-            <br>
-            <div class="button-area">
-              <a data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" href=""
-                style="font-size:11pt;color: #271669">
-                who we are <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
 
+      <!---->
+    </div>
+  </nav>
+  <!--Navbar//-->
+  <br><br><br><br>
+  <!-- hero -->
+  <section class="ps-3 pe-3 pe-md-5 ps-md-5 ps-lg-0 pe-lg-0" style='z-index:9999999999999999999;'>
+    <div class="container-fluid mt-4">
+      <div class="row justify-content-center pt-0">
+        <div class="col-sm-12 col-lg-5 chaplain-text-1 p-0 p-lg-5 pt-lg-0 mt-3">
+          <h1 class="mt-0 mt-lg-5" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
+            data-aos-delay="200">
+            welcome to ayf calabar diocese</h1>
+          <br>
+          <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="400">The
+            youth fellowship of the Anglican Diocese of Calabar, inspiring young people to
+            grow, discover, and impact for God</p>
+          <br>
+          <div class="button-area">
+            <a data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="400" href=""
+              class="mt-3" style="background-color: #271669;color:#fff">
+              Get in touch
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="400" href=""
+              class="mt-3" style="background-color: transparent;color:#271669;border: 1px solid #271669">
+              about us <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
         </div>
+        <div class="col-sm-12 col-lg-1"></div>
+        <div class="text-center col-sm-12 col-lg-5 mt-4 mt-lg-0 p-0 chaplain-text-img-1">
+          <img data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="400"
+            src="Untitled design (3).png" style='z-index:-999999999999999999999999999999999999999999999' alt="">
+        </div>
+
       </div>
-    </section>
-    <br><br>
-    <div class="container">
-      <div class="row">
-
-        <div class="col-lg-4 p-4">
-          <div class="d-flex align-items-start">
-            <div class="me-4">
-              <div
-                class="p-4 rounded-circle text-white font-weight-bold d-flex align-items-center justify-content-center"
-                style="height: 60px; width: 60px; background-color: #e18800">
-                1
-              </div>
-            </div>
-            <div class="">
-              <h5 class="mb-2" style="font-weight: 600;">Our Motto</h5>
-              <p class="text-secondary">The Motto of the Fellowship shall be “Towards the Perfect Man” (Ephesians
-                4:13A).</p>
-            </div>
-          </div>
+    </div>
+  </section>
+  <br>
+  <!--//mission-->
+  <section data-aos="fade-up" style="background: #cfe2ff18" class="p-0">
+    <div class="container-fluid mt-5">
+      <div class="row justify-content-center pt-0">
+        <div class="col-sm-12 col-lg-5 mt-4 mt-lg-0 p-0 chaplain-text-img">
+          <img src="dist/img/Your paragraph text (2).png" style="margin-top: -65px;" alt="">
         </div>
-
-        <div class="col-lg-4 p-4">
-          <div class="d-flex align-items-start">
-            <div class="me-4">
-              <div
-                class="p-4 rounded-circle text-white font-weight-bold d-flex align-items-center justify-content-center"
-                style="height: 60px; width: 60px; background-color: #e18800">
-                2
-              </div>
-            </div>
-            <div class="">
-              <h5 class="mb-2" style="font-weight: 600;">Our Aim</h5>
-              <p class="text-secondary">Empowering members with a deep understanding of Christian doctrine to live
-                as
-                true followers of Christ.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 p-4">
-          <div class="d-flex align-items-start">
-            <div class="me-4">
-              <div
-                class="p-4 rounded-circle text-white font-weight-bold d-flex align-items-center justify-content-center"
-                style="height: 60px; width: 60px; background-color: #e18800">
-                3
-              </div>
-            </div>
-            <div class="">
-              <h5 class="mb-2" style="font-weight: 600;">Our Objective</h5>
-              <p class="text-secondary">Fostering spiritual growth, obedience, and leadership through education,
-                discipleship, and community engagement.</p>
-            </div>
+        <!-- <div class="col-sm-12 col-lg-1"></div> -->
+        <div class="col-sm-12 col-lg-6 chaplain-text p-4 p-lg-5">
+          <h1 class="mt-0 mt-lg-5" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"
+            data-aos-delay="200">
+            Welcome we’re glad you’re here.</h1>
+          <br>
+          <p data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="400">Jesus was a
+            simple man with a simple plan to make God known. Together, we constantly look at Jesus through God’s
+            Word,
+            inspired to become whatever destiny requires so that we can give hope to the many still unfamiliar with
+            God’s amazing love. We do this by building a community rooted in the Bible, fostering deep spiritual
+            friendships, and doing good in our community.</p>
+          <br>
+          <div class="button-area">
+            <a data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" href=""
+              style="font-size:11pt;color: #271669">
+              who we are <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
           </div>
         </div>
 
       </div>
+    </div>
+  </section>
+  <br><br>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-4 p-4">
+        <div class="d-flex align-items-start">
+          <div class="me-4">
+            <div class="p-4 rounded-circle text-white font-weight-bold d-flex align-items-center justify-content-center"
+              style="height: 60px; width: 60px; background-color: #e18800">
+              1
+            </div>
+          </div>
+          <div class="">
+            <h5 class="mb-2" style="font-weight: 600;">Our Motto</h5>
+            <p class="text-secondary">The Motto of the Fellowship shall be “Towards the Perfect Man” (Ephesians
+              4:13A).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 p-4">
+        <div class="d-flex align-items-start">
+          <div class="me-4">
+            <div class="p-4 rounded-circle text-white font-weight-bold d-flex align-items-center justify-content-center"
+              style="height: 60px; width: 60px; background-color: #e18800">
+              2
+            </div>
+          </div>
+          <div class="">
+            <h5 class="mb-2" style="font-weight: 600;">Our Aim</h5>
+            <p class="text-secondary">Empowering members with a deep understanding of Christian doctrine to live
+              as
+              true followers of Christ.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 p-4">
+        <div class="d-flex align-items-start">
+          <div class="me-4">
+            <div class="p-4 rounded-circle text-white font-weight-bold d-flex align-items-center justify-content-center"
+              style="height: 60px; width: 60px; background-color: #e18800">
+              3
+            </div>
+          </div>
+          <div class="">
+            <h5 class="mb-2" style="font-weight: 600;">Our Objective</h5>
+            <p class="text-secondary">Fostering spiritual growth, obedience, and leadership through education,
+              discipleship, and community engagement.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
   <br>
@@ -455,22 +446,22 @@
               <a href="">Home</a>
             </li>
             <li>
-              <a href="about-us.html">About</a>
+              <a href="">About</a>
             </li>
             <!-- <li>
                 <a href="#">events and projects</a>
               </li> -->
             <li>
-              <a href="https://forms.gle/UyBrgfRNCXHb3ZGv7" target="_blank">Archdeaconries</a>
+              <a href="">Archdeaconries</a>
             </li>
             <li>
-              <a href="blog.html">blog</a>
+              <a href=""">blog</a>
             </li>
             <li>
-              <a href="http://bit.ly/GAvolunteers" target="_blank">Media</a>
+              <a href="" target="_blank">Media</a>
             </li>
             <li>
-              <a href="contact-us.html" target="_blank">contact us</a>
+              <a href="" target="_blank">contact us</a>
             </li>
           </ul>
         </div>
@@ -492,16 +483,16 @@
             <h3>Follow us</h3>
             <span class="footer-line"></span>
             <div class="social-media">
-              <a href="https://m.facebook.com/Goalsafrika/">
+              <a href="">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="https://mobile.twitter.com/goals_afrika">
+              <a href="">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="https://www.instagram.com/goals_afrika/">
+              <a href="">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="https://www.linkedin.com/company/goals-afrika">
+              <a href="">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
@@ -552,7 +543,7 @@
     document.addEventListener("scroll", function () {
       // Get the navbar element
       // console.log("Scroll event triggered");
-      var navbar = document.querySelector("#content > nav");
+      var navbar = document.querySelector("body > nav");
 
       // Check if user has scrolled down
       if (window.scrollY > 50) {
@@ -564,7 +555,6 @@
     });
 
   </script>
-  </div>
 </body>
 
 </html>

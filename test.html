@@ -11,39 +11,117 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
-
         body {
-            font-family: "Poppins", sans-serif !important;
+            padding-top: 50px;
+        }
+
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+
+        /* Preloader
+-------------------------------------------------------*/
+
+        .loader-mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fff;
+            z-index: 99999;
+        }
+
+        .loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 0;
+            color: #00c9d0;
+            display: inline-block;
+            margin: -25px 0 0 -25px;
+            text-indent: -9999em;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        .lead {
+            font-size: 13px;
+        }
+
+        .loader div {
+            background-color: #d9b06a;
+            display: inline-block;
+            float: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            opacity: .5;
+            border-radius: 50%;
+            -webkit-animation: ballPulseDouble 2s ease-in-out infinite;
+            animation: ballPulseDouble 2s ease-in-out infinite;
+        }
+
+        .loader div:last-child {
+            -webkit-animation-delay: -1s;
+            animation-delay: -1s;
+        }
+
+        @-webkit-keyframes ballPulseDouble {
+
+            0%,
+            100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+        }
+
+        @keyframes ballPulseDouble {
+
+            0%,
+            100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+            }
+
+            50% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
         }
     </style>
 </head>
 
-    <div class="row">
-
-       
+<!-- Preloader -->
+<div class="loader-mask">
+    <div class="loader">
+        <div></div>
+        <div></div>
+    </div>
 </div>
+<!-- Preloader -->
+<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla commodi totam impedit at, repellat blanditiis asperiores, illo laboriosam ex culpa, est esse odit saepe non! Tempore ad maxime distinctio?</h1>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
-    /* inspiration 
-    https://cz.pinterest.com/pin/830703093774129160/ */
-    $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 30,
-        nav: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 3
-            }
-        }
+    $(window).load(function () {
+        // Preloader
+        $('.loader').fadeOut();
+        $('.loader-mask').delay(350).fadeOut('slow');
     });
 </script>
 
