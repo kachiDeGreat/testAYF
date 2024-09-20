@@ -2,91 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Square+Peg&family=Ubuntu&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
-    
-
-
-
-        ul li {
-            color: #000;
-            display: inline-block;
-            margin-right: 10px;
-            font-size: 16px;
-            list-style: none;
-            text-align: center;
-            width: 21%;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            backdrop-filter: blur(20px);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-
-        ul li span {
-            display: block;
-            font-size: 3rem;
-        }
-
-        .count-down {
-            color: #000;
-        }
-
-        @media only screen and (max-width: 767px) {
-            li {
-                font-size: 14px;
-            }
-
-            li span {
-                font-size: 2rem;
-            }
+        body {
+            font-family: "Poppins", sans-serif !important;
         }
     </style>
 </head>
 
-<body>
-        
-                <div class="count-down">
-                    <ul>
-                        <li><span class="days"></span>Days</li>
-                        <li><span class="hours"></span>Hours</li>
-                        <li><span class="minutes"></span>Minutes</li>
-                        <li><span class="seconds"></span>Seconds</li>
-                    </ul>
-                </div>
+    <div class="row">
 
+       
+</div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
-    var countDownDate = new Date("Dec 30, 2024 00:00:00").getTime();
-
-    var x = setInterval(function () {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        // console.log(distance)
-
-        document.querySelector(".days").innerHTML = days;
-        document.querySelector(".hours").innerHTML = hours;
-        document.querySelector(".minutes").innerHTML = minutes;
-        document.querySelector(".seconds").innerHTML = seconds;
-
-        if (distance < 0) {
-            clearInterval(x);
-            document.querySelector(".count-down").innerHTML = "Count down experied"
+    /* inspiration 
+    https://cz.pinterest.com/pin/830703093774129160/ */
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
         }
-    })
-
-    // console.log(countDownDate);
+    });
 </script>
 
 </html>
