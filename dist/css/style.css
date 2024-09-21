@@ -365,6 +365,10 @@ body {
   color: #7a7a7a;
 }
 
+.links-alt {
+  display: none !important;
+}
+
 @media screen and (max-width: 536px) {
   .chaplain-text h1 {
     font-size: 30px;
@@ -426,7 +430,11 @@ body {
   .links {
     display: none !important;
   }
+  .links-alt {
+    display: block !important;
+  }
 }
+
 span.test {
   position: relative;
   font-weight: bolder;
@@ -553,6 +561,9 @@ span.test:before {
   font-size: 14px;
   color: #666;
   margin-top: 10px;
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
 }
 
 .date {
@@ -862,5 +873,15 @@ span.test:before {
   .volunteer_con h2 {
     line-height: 23px;
     font-size: 15px;
+  }
+}
+.linkk {
+  margin-left: 80px;
+  margin-top: -20px;
+}
+
+@media (max-width: 1026px) {
+  .linkk {
+    margin-left: 40px;
   }
 }
