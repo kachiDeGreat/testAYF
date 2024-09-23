@@ -620,7 +620,7 @@ span.test:before {
 /* footer */
 
 .footer {
-  background-color: #222;
+  background-color: #06040e;
   padding: 4rem 0 2rem 0;
 }
 .footer .title-sm {
@@ -968,6 +968,8 @@ span.test:before {
 .team-card .imgbox img {
   transform: scale(1);
   transition: 0.5s;
+  max-width: 100%;
+  height: auto;
 }
 .team-card:hover .imgbox img {
   transform: scale(1.15);

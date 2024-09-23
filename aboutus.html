@@ -14,12 +14,36 @@
     <link rel="stylesheet" href="dist/css/font-2.css">
     <link rel="stylesheet" href="dist/css/font-3.css">
     <link rel="stylesheet" href="dist/css/font-4.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 
     <!-- <script src="https://player.vimeo.com/api/player.js"></script> -->
     <style>
+        .owl-nav {
+            position: absolute;
+            bottom: -50px;
+            right: 0;
+        }
 
+        /* @media screen and (max-width: 600px) {
+      .owl-nav {
+        top: -px !important;
+      }
+    } */
+
+        .owl-nav button {
+            background: #e18800 !important;
+            color: #fff;
+            width: 45px;
+            height: 45px;
+            font-size: 25px !important;
+            box-shadow: 0px 0px 17px #00000005;
+            border-radius: 50%;
+        }
+
+        .owl-nav button:nth-of-type(1) {
+            margin-right: 13px;
+        }
     </style>
 </head>
 
@@ -65,7 +89,7 @@
                                 <a class="dropdown-item p-3" href="">Diocesan Excos</a>
                             </li>
                             <li> <a class="dropdown-item p-3" href="">Past Diocesan Excos</a> </li>
-                            <li><a class="dropdown-item p-3" style="border-bottom: none;" href="">Chaplains</a></li>
+                            <!-- <li><a class="dropdown-item p-3" style="border-bottom: none;" href="">Chaplains</a></li> -->
                         </ul>
                     </li>
 
@@ -132,8 +156,10 @@
             <br><br><br>
             <div class="row justify-content-center mt-3 mt-md-5">
                 <div class="col-12 col-lg-8 about-sec-text text-center">
-                    <h1>About <span>AYF Calabar</span></h1>
-                    <p class="mt-5">We empower individuals to become devoted followers of Christ through training,
+                    <h1 data-aos="fade-up" data-aos-duration="1000">About <span>AYF Calabar</span></h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="mt-5">We empower
+                        individuals to become devoted
+                        followers of Christ through training,
                         education, discipleship, and mentorship. Our mission is to foster spiritual growth, maturity,
                         and obedience to Christ's teachings, developing spiritual leaders who positively impact their
                         communities.</p>
@@ -148,8 +174,9 @@
             <br><br><br>
             <div class="row justify-content-center mt-3 mt-md-5">
                 <div class="col-12 col-md-11 about-sec-text text-center">
-                    <h1 class="text-white">Our <span>Mission</span></h1>
-                    <p class="mt-5 text-white-50">To train and develop Youths in the doctrine of Christianity towards
+                    <h1 data-aos="fade-up" data-aos-duration="1000" class="text-white">Our <span>Mission</span></h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="mt-5 text-white-50">To
+                        train and develop Youths in the doctrine of Christianity towards
                         attainment of the standard required of a true follower of Christ by making themselves useful to
                         the church, the Nation and the Commuunity, striving daily to emulate the ideals of the perfect
                         Man (Jesus)</p>
@@ -158,363 +185,592 @@
         </div>
         <br><br><br>
     </section>
-    <br>
-    <section class="p-2 p-md-5">
-        <div class="container-fluid" id="excos">
-            <div class="row">
-                <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000" data-aos-delay="400"
-                    class="col-12 text-center mt-3 post1">
-                    <span class="test text-capitalize mt-2"><i>Diocesan Executives</i></span>
-                    <h2 class="text-dark fw-bolder text-uppercase mt-3 mb-4">Meet Our Executives</h2>
+    <br><br><br><br>
+    <section class="history">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200"
+                    class="col-12 col-md-10 text-start mt-3 post1">
+                    <span class="test text-capitalize mt-2"><i>AYF Calabar in a nutshell</i></span>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/president.jpg" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>Bro. Ezeobi D. Nnamdi<br><span>Diocesan President</span></h3>
+                <br><br>
+                <div class="col-12 col-md-10 mt-4">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="accordion"
+                        id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button text-secondary fw-bolder" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    Our History
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
                             </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/Avatar-User.png" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>Bro. Ukah Azuma<br><span>Diocesan Vice-President</span></h3>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed text-secondary fw-bolder text-capitalize"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    the motto and Emblem OF The AYF
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
                             </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/sect.jpg" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>Sis. Nwawube Kosisochukwu<br><span>Diocesan Secretary</span></h3>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed text-secondary fw-bolder text-capitalize"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                    our structure
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
                             </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/asst-sect.jpg" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>bro. samson ogar<br><span>Diocesan Assistant Secretary</span></h3>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed text-secondary fw-bolder text-capitalize"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                    aria-expanded="false" aria-controls="collapseFour">
+                                    Chaplains
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the fourth item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
                             </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/Avatar-User.png" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>Sis. Ebarim Obasi <br><span>Diocesan Treasurer</span></h3>
-                            </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/Avatar-User.png" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>Bro. Tochukwu Pius <br><span>Diocesan Financial Secretary</span></h3>
-                            </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/Avatar-User.png" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>Sis. Gift Nwosu<br><span>Diocesan Sister's Forum Co-ordinator</span></h3>
-                            </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/Avatar-User.png" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>Bro. Onyekachi G. Richard<br><span>Diocesan Public Relations Officer(PRO)</span>
-                                </h3>
-                            </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/Avatar-User.png" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>Bro. Eborty Bassey<br><span>Diocesan Welfare Male</span></h3>
-                            </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/Avatar-User.png" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>Sis. Peace Uchanma<br><span>Diocesan Welfare Female</span></h3>
-                            </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/Avatar-User.png" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>Bro. David James<br><span>Diocesan Bible Study Co-ordinator</span></h3>
-                            </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/Avatar-User.png" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>Bro. Nelson Eronini<br><span>Diocesan Prayer Secretary</span></h3>
-                            </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/Avatar-User.png" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>Sis. Miracle Nwachi<br><span>Diocesan Youth Star Co-ordinator</span></h3>
-                            </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xxl-3">
-                    <div class="team-card">
-                        <div class="imgbox">
-                            <img src="dist/img/Avatar-User.png" height="500px">
-                        </div>
-                        <div class="content">
-                            <div class="contentBox">
-                                <h3>Bro. Justice Alozie<br><span>Diocesan Sports Director</span></h3>
-                            </div>
-                            <ul class="social">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-solid fa-phone-volume icon"></i> </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa-regular fa-envelope-open icon"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
+    <br><br><br><br>
+    <section class="p-2 p-md-5">
+        <div class="container-fluid" id="excos">
+            <div class="row">
+                <div data-aos="flip-up" data-aos-duration="1000" data-aos-delay="200"
+                    class="col-12 text-center mt-3 post1">
+                    <span class="test text-capitalize mt-2"><i>Diocesan Executives</i></span>
+                    <h2 class="text-dark fw-bolder text-uppercase mt-3 mb-4">Meet Our Executives</h2>
+                </div>
+                <div class="col-12 mt-4 ps-0 ms-0">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                        class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="team-card">
+                                <div class="imgbox">
+                                    <img src="dist/img/president.jpg">
+                                </div>
+                                <div class="content">
+                                    <div class="contentBox">
+                                        <h3>Bro. Ezeobi D. Nnamdi<br><span>Diocesan President</span></h3>
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-envelope-open icon"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="team-card">
+                                <div class="imgbox">
+                                    <img src="dist/img/Avatar-User.png">
+                                </div>
+                                <div class="content">
+                                    <div class="contentBox">
+                                        <h3>Bro. Ukah Azuma<br><span>Diocesan Vice President</span></h3>
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-envelope-open icon"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="team-card">
+                                <div class="imgbox">
+                                    <img src="dist/img/sect.jpg">
+                                </div>
+                                <div class="content">
+                                    <div class="contentBox">
+                                        <h3>Sis. Nwawube Kosisochukwu<br><span>Diocesan Secretary</span></h3>
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-envelope-open icon"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="team-card">
+                                <div class="imgbox">
+                                    <img src="dist/img/asst-sect.jpg">
+                                </div>
+                                <div class="content">
+                                    <div class="contentBox">
+                                        <h3>bro. samson ogar<br><span>Diocesan Assistant Secretary</span></h3>
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-envelope-open icon"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="team-card">
+                                <div class="imgbox">
+                                    <img src="dist/img/Avatar-User.png">
+                                </div>
+                                <div class="content">
+                                    <div class="contentBox">
+                                        <h3>Sis. Ebarim Obasi <br><span>Diocesan Treasurer</span></h3>
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-envelope-open icon"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="team-card">
+                                <div class="imgbox">
+                                    <img src="dist/img/Avatar-User.png">
+                                </div>
+                                <div class="content">
+                                    <div class="contentBox">
+                                        <h3>Bro. Tochukwu Pius <br><span>Diocesan Financial Secretary</span></h3>
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-envelope-open icon"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="imgbox">
+                                <img src="dist/img/sis-cord.jpg">
+                            </div>
+                            <div class="content">
+                                <div class="contentBox">
+                                    <h3>Sis. Gift Nwosu<br><span>Diocesan Sister's Forum Co-ordinator</span></h3>
+                                </div>
+                                <ul class="social">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-envelope-open icon"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="team-card">
+                                <div class="imgbox">
+                                    <img src="dist/img/pro.jpg">
+                                </div>
+                                <div class="content">
+                                    <div class="contentBox">
+                                        <h3>Bro. Onyekachi G. Richard<br><span>Diocesan Public Relations
+                                                Officer(PRO)</span>
+                                        </h3>
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-envelope-open icon"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="item">
+                            <div class="team-card">
+                                <div class="imgbox">
+                                    <img src="dist/img/Avatar-User.png">
+                                </div>
+                                <div class="content">
+                                    <div class="contentBox">
+                                        <h3>Bro. Eborty Bassey<br><span>Diocesan Welfare Male</span></h3>
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-envelope-open icon"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="team-card">
+                                <div class="imgbox">
+                                    <img src="dist/img/welfare-female.jpg">
+                                </div>
+                                <div class="content">
+                                    <div class="contentBox">
+                                        <h3>Sis. Peace Uchanma<br><span>Diocesan Welfare Female</span></h3>
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-envelope-open icon"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="team-card">
+                                <div class="imgbox">
+                                    <img src="dist/img/Avatar-User.png">
+                                </div>
+                                <div class="content">
+                                    <div class="contentBox">
+                                        <h3>Bro. David James<br><span>Diocesan Bible Study Co-ordinator</span></h3>
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-envelope-open icon"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="team-card">
+                                <div class="imgbox">
+                                    <img src="dist/img/Avatar-User.png">
+                                </div>
+                                <div class="content">
+                                    <div class="contentBox">
+                                        <h3>Bro. Nelson Eronini<br><span>Diocesan Prayer Secretary</span></h3>
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-envelope-open icon"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="team-card">
+                                <div class="imgbox">
+                                    <img src="dist/img/youth-star.jpg">
+                                </div>
+                                <div class="content">
+                                    <div class="contentBox">
+                                        <h3>Sis. Miracle Nwachi<br><span>Diocesan Youth Star Co-ordinator</span></h3>
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-envelope-open icon"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="team-card">
+                                <div class="imgbox">
+                                    <img src="dist/img/sport-cord.jpg">
+                                </div>
+                                <div class="content">
+                                    <div class="contentBox">
+                                        <h3>Bro. Justice Alozie<br><span>Diocesan Sports Director</span></h3>
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-phone-volume icon"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-regular fa-envelope-open icon"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+    </section>
+    <br><br><br><br>
+    <div class="volunteer_con container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200 class=" text-capitalize fw-bolder">
+                    The Perfect Manzine: A magazine sharing stories of faith, hope, and transformation, equipping young
+                    Christians
+                    for
+                    effective service and leadership.
+                </h2>
+
+                <div class="button-area pt-3 text-center">
+                    <a data-aos="flip-up" data-aos-duration="1000" data-aos-delay="100" href=""
+                        style="background-color: #e18800;padding: 17px 27px; font-size: 9pt;color: #fff;padding: 14px 21px;">support
+                        <i class="fa-solid fa-dollar-sign"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
+    <!-- footer -->
+    <footer class="footer" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 footer-about">
+                    <h3 class="title-sm">About us</h3>
+                    <p class="text">
+                        AYF Calabar Diocese, a vibrant community dedicated to empowering young Christians to live out
+                        their faith
+                        authentically. Our mission is rooted in training and developing individual members in the true
+                        doctrine of
+                        Christianity, equipping them to become devoted followers of Christ.
+                    </p>
+                </div>
+                <div class="col-12 col-md-1"></div>
+                <div class="col-12 col-md-5 footer-links">
+                    <h3 class="title-sm">quick Links</h3>
+                    <ul>
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                        <li>
+                            <a href="">About</a>
+                        </li>
+                        <!-- <li>
+              <a href="#">events and projects</a>
+            </li> -->
+                        <li>
+                            <a href="">Archdeaconries</a>
+                        </li>
+                        <li>
+                            <a href=""">blog</a>
+          </li>
+          <li>
+            <a href="" target=" _blank">Media</a>
+                        </li>
+                        <li>
+                            <a href="" target="_blank">contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bottom-footer">
+                <div class="copyright">
+                    <p class="text">
+                        &copy; Copyright
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        All rights reserved | AYF Calabar Diocese
+                    </p>
+                </div>
+
+                <div class="followme-wrap">
+                    <div class="followme">
+                        <h3>Follow us</h3>
+                        <span class="footer-line"></span>
+                        <div class="social-media">
+                            <a href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="back-btn-wrap">
+                        <a href="#" class="back-btn">
+                            <i class="fas fa-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <center>
+            <a href="https://sabicode.co/" target="_blank" class="link-secondary text-uppercase mt-5 mb-n3"
+                style="font-size: 12px">Website by kachiDeGreat</a>
+        </center>
+    </footer>
     <script src="dist/js/jquery.min.js"></script>
     <script src="dist/js/bootstrap.bundle.js"></script>
     <script src=dist/js/bootstrap.min.js"></script>
-    <script src="dist/js/slider.js"></script>
-    <script src="dist/js/numscorller.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="dist/js/script.js"></script>
     <script>
 
+        $(".owl-carousel").owlCarousel({
+            // loop: true,
+            margin: 30,
+            // autoplay: true,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        });
         // new WOW().init();
         // Add event listener to window scroll
         document.addEventListener("scroll", function () {
