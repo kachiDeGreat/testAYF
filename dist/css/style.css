@@ -270,6 +270,7 @@ body {
   background: #fff;
   border-radius: 0;
   border: none;
+  /* transition: 0.5s ease; */
 }
 .dropdown-item {
   border-bottom: 1px solid rgb(224, 224, 224);
@@ -291,7 +292,7 @@ body {
   border-radius: 50%;
   /* position: fixed;
   margin-right: 90px; */
-   /* Make icon black when bg is white */
+  /* Make icon black when bg is white */
 }
 .fa-circle-xmark {
   font-size: 2rem;
@@ -409,12 +410,11 @@ body {
 }
 
 @media (min-width: 992px) {
-
   .navbar {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
-      z-index: 1020;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
   }
   .navbar.scrolled {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -423,7 +423,7 @@ body {
   .navbar.scrolled .logo {
     transform: scale(0.8);
   }
-  
+
   .navbar:not(.scrolled) .logo {
     transform: scale(1);
   }
@@ -435,7 +435,7 @@ body {
     opacity: 0;
     top: 100%;
     display: block;
-    transition: all 0.2 ease-out;
+    transition: 0.5s ease;
   }
 
   .dropdown:hover > .dropdown-menu {
