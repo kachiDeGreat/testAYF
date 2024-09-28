@@ -7049,7 +7049,8 @@ textarea.form-control-lg {
   position: fixed;
   /* top: 0;
   right: 0;*/
-  right: 18px; 
+  top: 39px;
+  right: 19px; 
   z-index: 1030;
 }
 

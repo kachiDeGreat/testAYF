@@ -13,9 +13,10 @@ a {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", system-ui;
   overflow-x: hidden; /* hides horizontal scrollbar */
   scroll-behavior: smooth;
+  width: 100%;
 }
 /* Preloader
 -------------------------------------------------------*/
@@ -108,6 +109,10 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #575757;
+}
+
+.overflow-y-auto-alt {
+  overflow-y: none !important;
 }
 
 .circles {
@@ -222,7 +227,7 @@ body {
 }
 
 .logo {
-  max-width: 85px;
+  max-width: 110px;
   width: 100%;
   transition: transform 0.5s ease;
 }
@@ -408,7 +413,11 @@ body {
     text-align: center;
   }
 }
-
+@media (max-width: 992px) {
+  .overflow-y-auto-alt {
+    overflow-y: auto !important;
+  }
+}
 @media (min-width: 992px) {
   .navbar {
     position: -webkit-sticky;
@@ -419,6 +428,9 @@ body {
   .navbar.scrolled {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     background: #fff;
+  }
+  .logo {
+    max-width: 100px;
   }
   .navbar.scrolled .logo {
     transform: scale(0.8);
@@ -515,7 +527,9 @@ span.test:before {
 .events .coverr {
   background-color: #0a0818ee;
 }
-
+.events .cover-alt {
+  background-color: #06040e;
+}
 .news-card {
   width: 100%;
 
@@ -1067,4 +1081,59 @@ span.test:before {
 .social li a:hover:before {
   top: 0;
   background: #e18800;
+}
+
+.arch-image-link {
+  position: relative;
+  /* filter: brightness(0.5); */
+  display: block;
+}
+
+.image-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  color: #fff;
+  opacity: 1;
+  transition: opacity 0.3s, transform 0.5s, box-shadow 0.5s;
+  font-family: "Libre Baskerville", serif;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); */
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* .arch-image-link:hover .image-description {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+} */
+
+/* Show description on small screens */
+/* @media (max-width: 768px) {
+  .image-description {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  }
+} */
+
+.arch-bg-img {
+  transition: transform 0.5s, filter 0.5s, box-shadow 0.5s;
+  filter: brightness(0.6);
+  height: 250px;
+  /* Added fixed height */
+  object-fit: cover;
+  /* Make image responsive */
+  width: 100%;
+  /* Make image full width */
+}
+
+.arch-image-link:hover .arch-bg-img {
+  filter: brightness(0.4);
+  background-color: #e18800;
+  transform: scale(1.1);
+  /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); */
 }
