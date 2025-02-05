@@ -17,6 +17,9 @@ body {
   overflow-x: hidden; /* hides horizontal scrollbar */
   scroll-behavior: smooth;
   width: 100%;
+  /* background-image: url(../img/bg-halftone.svg);
+  background-repeat: no-repeat;
+  background-size: 100%; */
 }
 /* Preloader
 -------------------------------------------------------*/
@@ -120,7 +123,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 87%;
   overflow: hidden;
   z-index: -99999999999999999999999999999999999999999999999999999;
 }
@@ -273,8 +276,11 @@ body {
 
 .dropdown > .dropdown-menu {
   background: #fff;
+  display: block;
   border-radius: 0;
   border: none;
+  /* visibility: visible;
+  opacity: 1; */
   /* transition: 0.5s ease; */
 }
 .dropdown-item {
@@ -336,7 +342,7 @@ body {
   font-weight: bolder;
 }
 .chaplain-text-1 h1 {
-  font-size: 22px;
+  font-size: 35px;
   text-transform: uppercase;
   font-weight: bolder;
 }
@@ -426,7 +432,7 @@ body {
     z-index: 1020;
   }
   .navbar.scrolled {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1607843137) !important;
     background: #fff;
   }
   .logo {
@@ -514,8 +520,7 @@ span.test:before {
 }
 
 .events {
-  background: url(../img/WhatsApp\ Image\ 2024-07-19\ at\ 21.15.36.jpg)
-    no-repeat center;
+  background: url(../img/test-img.jpg) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -909,7 +914,33 @@ span.test:before {
 }
 
 /*-------------------------- About Us Style ------------------------------*/
+.text-brand {
+  color: #e18800;
+}
 
+.accordion-header {
+  padding: 30px 0;
+  background: transparent;
+}
+
+.accordion-body {
+  padding-bottom: 35px;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 13px;
+}
+.accordion-item {
+  border-bottom: 1px solid #cecece;
+}
+
+.about-sec {
+  /* background: green; */
+
+  width: 100%;
+  height: 100%;
+  padding-bottom: 60px;
+  z-index: 0;
+}
 .about-sec-text h1 {
   font-weight: bolder;
   text-transform: uppercase;
@@ -942,7 +973,7 @@ span.test:before {
     font-size: 14px;
   }
 }
-.team-card {
+.excos-card {
   position: relative;
   width: 100%;
   height: 400px;
@@ -956,7 +987,7 @@ span.test:before {
   align-items: center;
 }
 
-.team-card .content {
+.excos-card .content {
   position: absolute;
   padding: 8px;
   bottom: 0;
@@ -974,22 +1005,22 @@ span.test:before {
   transition-delay: 0.8s;
 }
 
-.team-card:hover .content {
+.excos-card:hover .content {
   bottom: 0px;
   transition-delay: 0s;
 }
 
-.team-card .imgbox img {
+.excos-card .imgbox img {
   transform: scale(1);
   transition: 0.5s;
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
 }
-.team-card:hover .imgbox img {
+.excos-card:hover .imgbox img {
   transform: scale(1.15);
 }
 
-.team-card .content .contentBox h3 {
+.excos-card .content .contentBox h3 {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1005,15 +1036,15 @@ span.test:before {
   transition-delay: 0.6s; */
 }
 
-.team-card:hover .content .contentBox h3 {
+.excos-card:hover .content .contentBox h3 {
   opacity: 0;
   transform: translateY(0px);
 }
 
-.team-card:hover .content .contentBox h3 span {
+.excos-card:hover .content .contentBox h3 span {
   opacity: 0;
 }
-.team-card .content .contentBox h3 span {
+.excos-card .content .contentBox h3 span {
   font-size: 12px;
   font-weight: bolder;
   text-transform: initial;
@@ -1035,7 +1066,7 @@ span.test:before {
   opacity: 0;
 }
 
-.team-card:hover .content .social li {
+.excos-card:hover .content .social li {
   transform: translateY(0px);
   opacity: 1;
 }

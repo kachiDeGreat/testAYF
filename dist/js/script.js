@@ -1,4 +1,4 @@
-AOS.init();
+// AOS.init();
 
 $(window).on("load", function () {
   // Preloader
@@ -6,7 +6,7 @@ $(window).on("load", function () {
   $(".loader-mask").delay(350).fadeOut("slow");
 });
 
-var countDownDate = new Date("Dec 13, 2024 22:00:00").getTime();
+var countDownDate = new Date("Feb 7, 2025 22:00:00").getTime();
 
 var x = setInterval(function () {
   var now = new Date().getTime();
