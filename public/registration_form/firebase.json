@@ -1,0 +1,37 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/aboutus/",
+        "destination": "/aboutus.html"
+      },
+      {
+        "source": "/contact/",
+        "destination": "/contact.html"
+      },
+      {
+        "source": "/archdeaconries/",
+        "destination": "/archdeaconries.html"
+      },
+      {
+        "source": "/diocesan-excos/",
+        "destination": "/diocesan-excos.html"
+      },
+      {
+        "source": "/404/",
+        "destination": "/404.html"
+      },
+      {
+        "source": "**",
+        "destination": "/404.html"
+      }
+    ]
+  }
+}
