@@ -1,5 +1,3 @@
-// https://www.linkedin.com/in/atakangk/
-//jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
@@ -198,13 +196,103 @@ $(".previous").click(function () {
     }
   );
 });
+function showSuccessMessage(message) {
+  const successMessage = document.getElementById("successMessage");
+  successMessage.innerHTML = `<p>✅ ${message}</p>`;
+  successMessage.style.display = "block";
+
+  // Hide the message after 3 seconds
+  setTimeout(() => {
+    successMessage.style.display = "none";
+  }, 3000);
+}
+
+function showErrorMessage(message) {
+  const errorAlert = document.getElementById("errorAlert");
+  const errorText = document.getElementById("errorText");
+
+  // Set the error message text
+  errorText.textContent = message;
+
+  // Show the error message
+  errorAlert.style.display = "block";
+
+  // Hide the message after 3 seconds
+  setTimeout(() => {
+    errorAlert.style.display = "none";
+  }, 3000);
+}
 
 // Handle form submission
+// document
+//   .getElementById("registrationForm")
+//   .addEventListener("submit", function (event) {
+//     event.preventDefault(); // Prevent the default form submission
+//     // Validation for the third fieldset (photo upload)
+//     const photoUpload = document.getElementById("photoUpload").files[0];
+//     const errorMessage = document.getElementById("errorMessage");
+//     const photoError = document.getElementById("photoError");
+
+//     let isValid = true;
+
+//     // Validate photo upload
+//     if (!photoUpload) {
+//       photoError.style.display = "block";
+//       isValid = false;
+//     } else {
+//       photoError.style.display = "none";
+//       if (photoUpload.size > 2.5 * 1024 * 1024) {
+//         // 2.5MB in bytes
+//         errorMessage.style.display = "block";
+//         isValid = false;
+//       } else {
+//         errorMessage.style.display = "none";
+//       }
+//     }
+
+//     if (!isValid) {
+//       return false;
+//     }
+
+//     // Log form data and image URL to console
+//     const formData = new FormData(document.querySelector("#registrationForm"));
+//     const reader = new FileReader();
+//     reader.onload = function (e) {
+//       formData.append("photoUpload", e.target.result);
+//       for (const [key, value] of formData.entries()) {
+//         console.log(`${key}: ${value}`);
+//       }
+
+//       // Show thank you alert
+//       alert("Thank you for submitting.");
+
+//       // Reset the form and go back to the first fieldset
+//       document.querySelector("#registrationForm").reset();
+//       $("fieldset")
+//         .css({ opacity: 1, transform: "scale(1)", position: "relative" })
+//         .hide();
+//       $("fieldset").first().show();
+//       $("#progressbar li").removeClass("active");
+//       $("#progressbar li").first().addClass("active");
+
+//       // Reset the photo preview
+//       document.getElementById("photoPreview").innerHTML =
+//         "<span>No photo uploaded</span>";
+//       animating = false;
+//     };
+//     reader.readAsDataURL(photoUpload);
+//   });
+//
+
 document
   .getElementById("registrationForm")
   .addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent the default form submission
-    // Validation for the third fieldset (photo upload)
+
+    // Show the loading spinner
+    document.getElementById("loadingSpinner").style.display = "block";
+
+    // Validate the form data (your existing validation logic)
     const photoUpload = document.getElementById("photoUpload").files[0];
     const errorMessage = document.getElementById("errorMessage");
     const photoError = document.getElementById("photoError");
@@ -227,34 +315,70 @@ document
     }
 
     if (!isValid) {
+      // Hide the spinner if validation fails
+      document.getElementById("loadingSpinner").style.display = "none";
+
       return false;
     }
 
-    // Log form data and image URL to console
-    const formData = new FormData(document.querySelector("#registrationForm"));
+    // Prepare the form data
+    const formData = {
+      fullName: document.getElementById("fullName").value.trim(),
+      email: document.getElementById("email").value.trim(),
+      phoneNumber: document.getElementById("phoneNumber").value.trim(),
+      dob: document.getElementById("dob").value.trim(),
+      archdeaconry: document.getElementById("archdeaconry").value,
+      churchName: document.getElementById("churchName").value.trim(),
+      photoUrl: "", // Will be updated after photo upload
+    };
+
+    // Handle photo upload
     const reader = new FileReader();
     reader.onload = function (e) {
-      formData.append("photoUpload", e.target.result);
-      for (const [key, value] of formData.entries()) {
-        console.log(`${key}: ${value}`);
-      }
+      formData.photoUrl = e.target.result; // Add photo URL to form data
 
-      // Show thank you alert
-      alert("Thank you for submitting.");
+      // Send the form data to Google Sheets
+      fetch(
+        "https://script.google.com/macros/s/AKfycbzgwmAJ79iSAJpKGT27QyEGbvLmzwXIocsgJYBy53_wuxjwPdDgqx6zAJQqcJRVIXnVTQ/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(formData),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          mode: "no-cors", // Bypass CORS restrictions
+        }
+      )
+        .then(() => {
+          // Hide the spinner
+          document.getElementById("loadingSpinner").style.display = "none";
 
-      // Reset the form and go back to the first fieldset
-      document.querySelector("#registrationForm").reset();
-      $("fieldset")
-        .css({ opacity: 1, transform: "scale(1)", position: "relative" })
-        .hide();
-      $("fieldset").first().show();
-      $("#progressbar li").removeClass("active");
-      $("#progressbar li").first().addClass("active");
+          // Show the success message
+          showSuccessMessage("Thank you for submitting!");
 
-      // Reset the photo preview
-      document.getElementById("photoPreview").innerHTML =
-        "<span>No photo uploaded</span>";
-      animating = false;
+          // Reset the form and go back to the first fieldset
+          document.querySelector("#registrationForm").reset();
+          $("fieldset")
+            .css({ opacity: 1, transform: "scale(1)", position: "relative" })
+            .hide();
+          $("fieldset").first().show();
+          $("#progressbar li").removeClass("active");
+          $("#progressbar li").first().addClass("active");
+
+          // Reset the photo preview
+          document.getElementById("photoPreview").innerHTML =
+            "<span>No photo uploaded</span>";
+          animating = false;
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          // Hide the spinner
+          document.getElementById("loadingSpinner").style.display = "none";
+
+          showErrorMessage(
+            "An error occurred while submitting the form, refresh page."
+          );
+        });
     };
     reader.readAsDataURL(photoUpload);
   });
