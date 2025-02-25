@@ -1,6 +1,6 @@
-AOS.init({
-  once: true, // Animations will only happen once
-});
+// AOS.init({
+//   once: true, // Animations will only happen once
+// });
 
 $(window).on("load", function () {
   // Preloader
