@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Receipt</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Outfit", sans-serif;
+        background-color: #f2f4f7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .receipt-container {
+        background: #fff;
+        padding: 2.5rem;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        max-width: 550px;
+        width: 100%;
+        text-align: center;
+        animation: fadeIn 0.5s ease;
+        position: relative;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .logo {
+        max-width: 150px;
+        margin: 0 auto 1.5rem;
+      }
+      h2 {
+        color: #271669;
+        margin-bottom: 0.5rem;
+        margin-top: -2.5rem;
+      }
+      p {
+        color: #555;
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+      }
+      .divider {
+        height: 1px;
+        background-color: #eee;
+        margin: 1.5rem 0;
+      }
+      .details {
+        text-align: left;
+        line-height: 1.8;
+        font-size: 0.95rem;
+        color: #333;
+      }
+      .details strong {
+        display: inline-block;
+        width: 130px;
+        color: #111;
+      }
+      .download-btn {
+        background-color: #271669;
+        color: white;
+        border: none;
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 2rem;
+        font-family: "Outfit", sans-serif;
+        transition: background-color 0.3s ease;
+      }
+      .download-btn:hover {
+        background-color: #190f41;
+      }
+
+      .status {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 1rem 0;
+        color: white;
+        display: inline-block;
+        padding: 0.3rem 1rem;
+        border-radius: 20px;
+      }
+      .paid {
+        background-color: #0aa83f;
+      }
+      .pending {
+        background-color: #f0ad4e;
+      }
+      .failed {
+        background-color: #dc3545;
+      }
+
+      .paid-badge {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+      .paid-badge img {
+        width: 120px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="receipt-container" id="receipt">
+      <img src="../dist/img/ayfcalabar-logo-alt.png" alt="Logo" class="logo" />
+
+      <h2>Payment Receipt</h2>
+      <p>Thank you for registering for Obudu'25 Conference!</p>
+
+      <div id="statusLabel"></div>
+
+      <div class="divider"></div>
+
+      <div class="details" id="receiptDetails"></div>
+
+      <div class="paid-badge" id="paidBadge" style="display: none">
+        <img src="../dist/img/paid-png.png" alt="Paid Stamp" />
+      </div>
+
+      <button class="download-btn" onclick="downloadPDF()">
+        Download Receipt (Proceed to Registration)
+      </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const reference = params.get("reference") || "N/A";
+      const fullName = params.get("fullName") || "N/A";
+      const email = params.get("email") || "N/A";
+      const phone = params.get("phone") || "N/A";
+      const amount = params.get("amount") || "0";
+      const status = params.get("status") || "success";
+      const dateParam = params.get("date");
+      const date = dateParam ? new Date(dateParam) : new Date();
+
+      const formattedDate = date.toLocaleDateString();
+      const formattedTime = date.toLocaleTimeString();
+
+      const statusLabel = document.getElementById("statusLabel");
+      const badge = document.getElementById("paidBadge");
+
+      let statusClass = "paid",
+        statusText = "PAID";
+      if (status.toLowerCase() === "pending") {
+        statusClass = "pending";
+        statusText = "PENDING";
+      } else if (status.toLowerCase() === "failed") {
+        statusClass = "failed";
+        statusText = "FAILED";
+      }
+
+      statusLabel.innerHTML = `<span class="status ${statusClass}">${statusText}</span>`;
+      if (statusText === "PAID") badge.style.display = "flex";
+
+      const receiptHtml = `
+      <p><strong>Full Name:</strong> ${fullName}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Amount Paid:</strong> ₦${amount}</p>
+      <p><strong>Transaction ID:</strong> ${reference}</p>
+      <p><strong>Date:</strong> ${formattedDate}</p>
+      <p><strong>Time:</strong> ${formattedTime}</p>
+    `;
+      document.getElementById("receiptDetails").innerHTML = receiptHtml;
+
+      async function downloadPDF() {
+        const { jsPDF } = window.jspdf;
+        const receiptElement = document.querySelector(".receipt-container");
+
+        const canvas = await html2canvas(receiptElement, { scale: 2 });
+        const imgData = canvas.toDataURL("image/png");
+
+        const pdf = new jsPDF("p", "mm", "a4");
+        const imgProps = pdf.getImageProperties(imgData);
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+        pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+        const fileName = `Obudu25_Receipt_${reference}.pdf`;
+        pdf.save(fileName);
+
+        setTimeout(() => {
+          const queryParams = new URLSearchParams({
+            fullName,
+            phone,
+            email,
+            status: statusText.toLowerCase(),
+          }).toString();
+
+          window.location.href = `register.html?${queryParams}`;
+        }, 500);
+      }
+    </script>
+  </body>
+</html>

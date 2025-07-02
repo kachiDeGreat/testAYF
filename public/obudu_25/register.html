@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obudu'25 Registration</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Outfit", sans-serif;
+        background: linear-gradient(135deg, #0f2027, #2c5364, #203a43);
+        margin: 0;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+      .registration-container {
+        background: #fff;
+        padding: 2.5rem;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        max-width: 650px;
+        width: 100%;
+        animation: fadeIn 0.5s ease;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      h2 {
+        color: #271669;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .form-group {
+        margin-bottom: 0.85rem;
+      }
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 0.9rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+        font-family: inherit;
+      }
+      input:focus,
+      select:focus {
+        border-color: #271669;
+        outline: none;
+      }
+      .status-indicator {
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        display: inline-block;
+        margin-top: 0.5rem;
+      }
+      .paid {
+        background: #d4edda;
+        color: #155724;
+      }
+      .pending {
+        background: #fff3cd;
+        color: #856404;
+      }
+      .failed {
+        background: #f8d7da;
+        color: #721c24;
+      }
+
+      .flex-row {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .flex-row .form-group {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      button {
+        margin-top: 1.5rem;
+        width: 100%;
+        padding: 0.9rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        background-color: #271669;
+        color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-family: "Outfit", sans-serif;
+      }
+      button:hover {
+        background-color: #3a2285;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 1rem;
+        }
+        .registration-container {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="registration-container">
+      <h2>Complete Your Registration</h2>
+      <form id="registrationForm">
+        <div class="flex-row">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number (WhatsApp)</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-group">
+          <label for="archdeaconry">Select your Archdeaconry/Deanery</label>
+          <select id="archdeaconry" name="archdeaconry" required>
+            <option value="" disabled selected>
+              -- Select Archdeaconry/Deanery --
+            </option>
+            <option value="Abi missionary Archdeaconry">
+              Abi missionary Archdeaconry
+            </option>
+            <option value="Akampka Archdeaconry">Akampka Archdeaconry</option>
+            <option value="Ascension Deanery">Ascension Deanery</option>
+            <option value="Cathedral Archdeaconry">
+              Cathedral Archdeaconry
+            </option>
+            <option value="Calabar Archdeaconry">Calabar Archdeaconry</option>
+            <option value="Christ - church Deanery">
+              Christ - church Deanery
+            </option>
+            <option value="Efut Deanery">Efut Deanery</option>
+            <option value="Ikom Archdeaconry">Ikom Archdeaconry</option>
+            <option value="Obubra missionary Archdeaconry">
+              Obubra missionary Archdeaconry
+            </option>
+            <option value="Obudu missionary Archdeaconry">
+              Obudu missionary Archdeaconry
+            </option>
+            <option value="Ogoja Archdeaconry">Ogoja Archdeaconry</option>
+            <option value="Yakurr missionary Archdeaconry">
+              Yakurr missionary Archdeaconry
+            </option>
+            <option value="Yala - East missionary Archdeaconry">
+              Yala - East missionary Archdeaconry
+            </option>
+            <option value="Yala - west missionary Archdeaconry">
+              Yala - west missionary Archdeaconry
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="localChurch">Local Church Name</label>
+          <input type="text" id="localChurch" name="localChurch" required />
+        </div>
+        <div class="form-group">
+          <label for="paymentStatus">Payment Status</label>
+          <input type="text" id="paymentStatus" name="paymentStatus" readonly />
+          <span id="statusBadge"></span>
+        </div>
+        <button type="submit">Submit Registration</button>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const fullName = params.get("fullName");
+      const phone = params.get("phone");
+      const email = params.get("email");
+      const paymentStatus = params.get("status");
+
+      // Redirect if any of the required query parameters is missing
+      if (!fullName || !phone || !email || !paymentStatus) {
+        window.location.href = "landing.html";
+      }
+
+      // Proceed to populate form only if valid
+      if (fullName) document.getElementById("fullName").value = fullName;
+      if (phone) document.getElementById("phone").value = phone;
+      if (email) document.getElementById("email").value = email;
+      if (paymentStatus) {
+        const status = paymentStatus.toLowerCase();
+        const statusInput = document.getElementById("paymentStatus");
+        const badge = document.getElementById("statusBadge");
+
+        statusInput.value = status.toUpperCase();
+        let badgeClass = "paid";
+        let badgeText = "Paid";
+
+        if (status === "pending") {
+          badgeClass = "pending";
+          badgeText = "Pending";
+        } else if (status === "failed") {
+          badgeClass = "failed";
+          badgeText = "Failed";
+        }
+
+        badge.className = `status-indicator ${badgeClass}`;
+        badge.innerText = badgeText;
+      }
+
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const formData = {
+            fullName: document.getElementById("fullName").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            phone: document.getElementById("phone").value.trim(),
+            archdeaconry: document.getElementById("archdeaconry").value,
+            localChurch: document.getElementById("localChurch").value.trim(),
+            paymentStatus: document.getElementById("paymentStatus").value,
+          };
+
+          const requiredFields = Object.entries(formData).filter(
+            ([key, val]) => !val
+          );
+          if (requiredFields.length > 0) {
+            Toastify({
+              text: "Please fill all required fields!",
+              backgroundColor: "#d9534f",
+              duration: 3000,
+              gravity: "top",
+              position: "center",
+              duration: 3000,
+              close: true,
+            }).showToast();
+            return;
+          }
+
+          console.log("Form submitted:", formData);
+
+          Toastify({
+            text: "Form submitted!",
+            backgroundColor: "#28a745",
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            duration: 3000,
+            close: true,
+          }).showToast();
+
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 3000);
+        });
+    </script>
+  </body>
+</html>

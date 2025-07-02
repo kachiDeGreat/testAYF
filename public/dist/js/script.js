@@ -8,7 +8,7 @@ $(window).on("load", function () {
   $(".loader-mask").delay(350).fadeOut("slow");
 });
 
-var countDownDate = new Date("Mar 25, 2025 22:00:00").getTime();
+var countDownDate = new Date("Jul 30, 2025 12:00:00").getTime();
 
 var x = setInterval(function () {
   var now = new Date().getTime();

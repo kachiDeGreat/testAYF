@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youth Conference Registration - Pay</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Toastify CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Outfit", sans-serif;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #0f2027, #2c5364, #203a43);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .landing__container {
+        background: #ffffff;
+        padding: 2.5rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        width: 100%;
+        max-width: 450px;
+        text-align: center;
+      }
+
+      .landing__logo {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        margin-bottom: -1.8rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .landing__h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #0f2027;
+      }
+
+      .landing__p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        color: #333;
+      }
+
+      .landing__input {
+        width: 90%;
+        padding: 0.9rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-family: "Outfit", sans-serif;
+        font-size: 1rem;
+      }
+
+      .landing__button {
+        width: 100%;
+        padding: 1rem;
+        background-color: #271669;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: bold;
+        font-family: "Outfit", sans-serif;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .landing__button:hover {
+        background-color: #1c0f50;
+      }
+
+      @media (max-width: 500px) {
+        .landing__container {
+          margin: 1rem;
+          padding: 2rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="landing__container">
+      <img
+        src="https://ayfcalabar.org.ng/registration_form/ayfcalabar-logo-alt.png"
+        alt="Conference Logo"
+        class="landing__logo"
+      />
+
+      <h1 class="landing__h1">Obudu'25 Conference Registration</h1>
+      <p class="landing__p">₦1500 Conference Registration Fee</p>
+
+      <input
+        type="text"
+        id="fullName"
+        class="landing__input"
+        placeholder="Full Name"
+        required
+      />
+      <input
+        type="email"
+        id="email"
+        class="landing__input"
+        placeholder="Email Address"
+        required
+      />
+      <input
+        type="tel"
+        id="phone"
+        class="landing__input"
+        placeholder="Phone Number (e.g. 08012345678)"
+        required
+      />
+
+      <button class="landing__button" onclick="payWithPaystack()">
+        Pay ₦1500
+      </button>
+    </div>
+
+    <!-- Toastify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Paystack Script -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script>
+      function showToast(message, color = "#d9534f") {
+        Toastify({
+          text: message,
+          duration: 3000,
+          gravity: "top",
+          position: "center",
+          backgroundColor: color,
+          stopOnFocus: true,
+        }).showToast();
+      }
+
+      function isValidName(name) {
+        return /^[a-zA-Z\s]{3,}$/.test(name);
+      }
+
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      function isValidPhone(phone) {
+        return /^(070|080|081|090|091|071|089|088|085|086|087)\d{8}$/.test(
+          phone
+        );
+      }
+
+      function payWithPaystack() {
+        const fullName = document.getElementById("fullName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+
+        if (!fullName || !email || !phone) {
+          showToast("All fields are required.");
+          return;
+        }
+
+        if (!isValidName(fullName)) {
+          showToast("Enter a valid full name (min 3 letters, no numbers).");
+          return;
+        }
+
+        if (!isValidEmail(email)) {
+          showToast("Enter a valid email address.");
+          return;
+        }
+
+        if (!isValidPhone(phone)) {
+          showToast("Enter a valid Nigerian phone number (e.g. 08012345678).");
+          return;
+        }
+
+        const handler = PaystackPop.setup({
+          key: "pk_test_6fd9e391457bc7a2d72a69436f1bce4ab728f2d6",
+          email: email,
+          amount: 1500 * 100,
+          currency: "NGN",
+          metadata: {
+            custom_fields: [
+              {
+                display_name: "Full Name",
+                variable_name: "full_name",
+                value: fullName,
+              },
+              {
+                display_name: "Phone Number",
+                variable_name: "phone_number",
+                value: phone,
+              },
+            ],
+          },
+          callback: function (response) {
+            const reference = response.reference;
+            const now = new Date().toISOString();
+
+            const queryString = new URLSearchParams({
+              reference,
+              fullName,
+              email,
+              phone,
+              amount: "1500",
+              date: now,
+            }).toString();
+
+            window.location.href = `receipt.html?${queryString}`;
+          },
+          onClose: function () {
+            showToast("Payment cancelled.", "#ffc107");
+          },
+        });
+
+        handler.openIframe();
+      }
+    </script>
+  </body>
+</html>
